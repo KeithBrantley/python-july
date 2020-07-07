@@ -6,20 +6,20 @@ class User:
 
     def make_deposit(self, amount):
         self.balance += amount
-    
+        return self
 
     def make_withdrawal(self, amount):
         self.balance -= amount
- 
+        return self
 
     def display_user_balance(self):
         print(f"{self.name} balance is {self.balance}.")
-
+        return self
 
     def transfer_money(self, other_user, amount):
         self.balance -= amount
         other_user.balance += amount
- 
+        return self
 
 Elena = User('Elena', 'elena@gmail.com', 0)
 Bethany = User('Bethany', 'bethany@gmail.com', 0)
@@ -29,27 +29,11 @@ print(Elena.email)
 print(Bethany.email)
 print(Tito.email)
 
-# Elena.make_deposit(100).make_deposit(100).make_deposit(100).make_withdrawal(50).display_user_balance()
-Elena.make_deposit(100)
-Elena.make_deposit(100)
-Elena.make_deposit(100)
-Elena.make_withdrawal(50)
-Elena.display_user_balance()
+Elena.make_deposit(100).make_deposit(100).make_deposit(100).make_withdrawal(50).display_user_balance()
 
-# Bethany.make_deposit(100).make_deposit(100).make_withdrawal(50).make_withdrawal(50).display_user_balance()
-Bethany.make_deposit(100)
-Bethany.make_deposit(100)
-Bethany.make_withdrawal(50)
-Bethany.make_withdrawal(50)
-Bethany.display_user_balance()
+Bethany.make_deposit(100).make_deposit(100).make_withdrawal(50).make_withdrawal(50).display_user_balance()
 
-# Tito.make_deposit(500).make_withdrawal(100).make_withdrawal(100).make_withdrawal(100).display_user_balance()
-Tito.make_deposit(500)
-Tito.make_withdrawal(100)
-Tito.make_withdrawal(100)
-Tito.make_withdrawal(100)
-Tito.display_user_balance()
-
+Tito.make_deposit(500).make_withdrawal(100).make_withdrawal(100).make_withdrawal(100).display_user_balance()
 
 Elena.transfer_money(Tito, 100)
 Elena.display_user_balance()
