@@ -13,12 +13,13 @@ class User:
         return self
 
     def display_user_balance(self):
-        print(f"{self.name} balance is {self.balance}.")
+        print(f"{self.name} balance is ${self.balance}.")
         return self
 
     def transfer_money(self, other_user, amount):
         self.balance -= amount
         other_user.balance += amount
+        print(f"{self.name} transfered ${amount} to {other_user.name}.")
         return self
 
 Elena = User('Elena', 'elena@gmail.com', 0)
