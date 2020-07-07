@@ -29,27 +29,23 @@ print(Elena.email)
 print(Bethany.email)
 print(Tito.email)
 
-# Elena.make_deposit(100).make_deposit(100).make_deposit(100).make_withdrawal(50).display_user_balance()
 Elena.make_deposit(100)
 Elena.make_deposit(100)
 Elena.make_deposit(100)
 Elena.make_withdrawal(50)
 Elena.display_user_balance()
 
-# Bethany.make_deposit(100).make_deposit(100).make_withdrawal(50).make_withdrawal(50).display_user_balance()
 Bethany.make_deposit(100)
 Bethany.make_deposit(100)
 Bethany.make_withdrawal(50)
 Bethany.make_withdrawal(50)
 Bethany.display_user_balance()
 
-# Tito.make_deposit(500).make_withdrawal(100).make_withdrawal(100).make_withdrawal(100).display_user_balance()
 Tito.make_deposit(500)
 Tito.make_withdrawal(100)
 Tito.make_withdrawal(100)
 Tito.make_withdrawal(100)
 Tito.display_user_balance()
-
 
 Elena.transfer_money(Tito, 100)
 Elena.display_user_balance()
